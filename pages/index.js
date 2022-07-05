@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -20,27 +21,26 @@ export default function Home() {
         </div>
 
         <div className={styles.grid}>
-          <a href="/queda" className={styles.card}>
-            <h2>Quedas &rarr;</h2>
-            <Image src="/pubParaquedas.jpeg" alt="PUBG Paraquedas" width={250} height={200} />
-          </a>
+          <Link href="/queda">
+            <a className={styles.card}>
+              <h2>Quedas &rarr;</h2>
+              <Image src="/pubParaquedas.jpeg" alt="PUBG Paraquedas" width={250} height={200} />
+            </a>
+          </Link>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Coletes &rarr;</h2>
-            <Image src="/pubColete.jpeg" alt="PUBG Colete" width={250} height={200} />
+          <Link href="/colete">
+            <a className={styles.card}>
+              <h2>Coletes &rarr;</h2>
+              <Image src="/pubColete.jpeg" alt="PUBG Colete" width={250} height={200} />
+            </a>
+          </Link>
 
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>capacetes &rarr;</h2>
-            <Image src="/pubCapacete.jpeg" alt="PUBG Capacete" width={250} height={200} />
-          </a>
+          <Link href="/capacete">
+            <a className={styles.card}>
+              <h2>capacetes &rarr;</h2>
+              <Image src="/pubCapacete.jpeg" alt="PUBG Capacete" width={250} height={200} />
+            </a>
+          </Link>
         </div>
       </main>
 

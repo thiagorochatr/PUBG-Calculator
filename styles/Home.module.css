@@ -31,6 +31,11 @@
   text-underline-offset: 3px;
 }
 
+.footer a:hover {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
 .title a {
   color: #1e4c81;
   text-decoration: none;
