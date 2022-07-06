@@ -80,8 +80,6 @@ export default function Queda() {
           Thiago Rocha
         </a>
       </footer>
-
-
     </div>
   )
 }
