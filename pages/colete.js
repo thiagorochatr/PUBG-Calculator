@@ -18,7 +18,7 @@ export default function Colete() {
     } else if(inputValue >= 46) {
       newValue = 100;
     } else {
-      newValue = 100 - (46 - inputValue);
+      newValue = Math.ceil(100 - 0.6*(46 - inputValue));
     }
     setColete21(newValue);
   }
@@ -32,26 +32,21 @@ export default function Colete() {
     } else if(inputValue >= 50) {
       newValue = 100;
     } else {
-      newValue = 100 - (50 - inputValue);
+      newValue = Math.ceil(100 - 0.45*(50 - inputValue));
     }
     setColete32(newValue);
   }
 
   function colete3para1(event) {
     const inputValue = event.target.value;
-    let newValue, aux;
+    let newValue;
 
     if(inputValue > 100 || inputValue <= 0) {
       newValue = -99999;
-    } else if(inputValue >= 50) {
+    } else if(inputValue >= 30) {
       newValue = 100;
     } else {
-      aux = 100 - (50 - inputValue); //99 até 51
-      if(aux >= 46) {
-        newValue = 100;
-      } else {
-        newValue = 100 - (46 - aux);
-      }
+      newValue = Math.ceil(100 - 0.65*(30 - inputValue)); //100 - 78
     }
     setColete31(newValue);
   }
